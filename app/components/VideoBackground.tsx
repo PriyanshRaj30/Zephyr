@@ -15,7 +15,7 @@ export default function VideoBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % videos.length);
-    }, 5000);
+    }, 60000);
 
     return () => clearInterval(interval);
   }, []);
@@ -30,17 +30,7 @@ export default function VideoBackground() {
         loop
         playsInline
         preload="metadata"
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          minWidth: '100%',
-          minHeight: '100%',
-          width: '100vw',
-          height: '100vh',
-          objectFit: 'cover',
-          transform: 'translate(-50%, -50%)'
-        }}
+        className="video"
       >
         <source src={videos[index]} type="video/mp4" />
       </video>
