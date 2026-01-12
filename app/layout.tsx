@@ -1,18 +1,20 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import VideoBackground from "./components/VideoBackground"; 
+import VideoBackground from "./components/VideoBackground";
+import "./globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="h-full">
+      <body className="h-full relative overflow-hidden">
         <VideoBackground />
         {children}
       </body>
     </html>
   );
 }
+

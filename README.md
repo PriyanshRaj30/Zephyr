@@ -1,2 +1,2 @@
 Boost your focus with an all-in-one app featuring a music player for immersive vibes, Pomodoro timer for structured sessions, to-do lists for organization, and AI for instant query answers.
-Collaborate seamlessly via video calls with friends, turning solo productivity into motivated group success.
+Collaborate seamlessly via video calls with friends, turning solo productivity into motivated group success. 

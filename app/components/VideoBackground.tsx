@@ -6,7 +6,7 @@ const videos = [
   "/lofi1.mp4",
   "/lofi2.mp4",
   "/lofi3.mp4",
-  
+
 ];
 
 export default function VideoBackground() {
@@ -20,21 +20,31 @@ export default function VideoBackground() {
     return () => clearInterval(interval);
   }, []);
 
+
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 z-0 pointer-events-none" style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
       <video
-        key={videos[index]} // 👈 forces reload for smooth switching
+        key={videos[index]} 
         autoPlay
         muted
         loop
         playsInline
-        className="w-full h-full object-cover transition-opacity duration-1000"
+        preload="metadata"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          minWidth: '100%',
+          minHeight: '100%',
+          width: '100vw',
+          height: '100vh',
+          objectFit: 'cover',
+          transform: 'translate(-50%, -50%)'
+        }}
       >
         <source src={videos[index]} type="video/mp4" />
       </video>
-
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/40" />
     </div>
   );
 }
+
