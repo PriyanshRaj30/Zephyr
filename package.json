@@ -2,6 +2,7 @@
   "name": "focus-app",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.8.2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,10 +12,10 @@
   "dependencies": {
     "@heroui/system": "^2.4.26",
     "framer-motion": "^12.29.2",
-    "next": "^16.1.1",
+    "next": "14.2.5",
     "peerjs": "^1.5.5",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "socket.io": "^4.8.3",
     "socket.io-client": "^4.8.3"
   },
@@ -22,14 +23,13 @@
     "@netlify/plugin-nextjs": "^5.15.7",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "autoprefixer": "^10.4.24",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
     "typescript": "^5"
-  },
-  "packageManager": "yarn@4.12.0+sha512.f45ab632439a67f8bc759bf32ead036a1f413287b9042726b7cc4818b7b49e14e9423ba49b18f9e06ea4941c1ad062385b1d8760a8d5091a1a31e5f6219afca8"
+  }
 }
