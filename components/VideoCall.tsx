@@ -12,12 +12,12 @@ export default function VideoCall() {
 
   // Init Peer
   useEffect(() => {
-    const p = new Peer(); // uses public PeerJS server
+    const p = new Peer(); // public PeerJS server
     setPeer(p);
 
     p.on("open", (id) => {
-      setPeerId(id);
       console.log("My Peer ID:", id);
+      setPeerId(id);
     });
 
     p.on("call", async (call) => {
@@ -40,7 +40,7 @@ export default function VideoCall() {
     });
 
     return () => p.destroy();
-  }, []);
+  }, []); // ✅ VERY IMPORTANT
 
   // Call Friend
   const callPeer = async () => {

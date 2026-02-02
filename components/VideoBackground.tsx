@@ -15,26 +15,13 @@ export default function VideoBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % videos.length);
-    }, 60000);
-
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
-
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none" style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
-      <video
-        key={videos[index]} 
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className="video"
-      >
-        <source src={videos[index]} type="video/mp4" />
+    <video autoPlay muted loop className="video">         
+          <source src={`/lofi1.mp4`} type="video/mp4"/>       
       </video>
-    </div>
   );
 }
-

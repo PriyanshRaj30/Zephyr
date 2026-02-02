@@ -4,7 +4,8 @@ export default function FocusRoom() {
   return (
     <main>
       <h1>Focus Room</h1>
-      <VideoCall />
+      {/* <VideoCall /> */}
     </main>
   );
 }
+

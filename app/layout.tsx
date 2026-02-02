@@ -1,8 +1,10 @@
-import Link from "next/link";
-import { ReactNode } from "react";
-import VideoBackground from "../components/VideoBackground";
+import "./globals.css";
 import MusicBar from "../components/MusicBar";
 import "./globals.css";
+import Navbar from "../components/Navbar";
+import { color } from "framer-motion";
+
+
 
 export default function RootLayout({
   children,
@@ -11,18 +13,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative min-h-screen overflow-hidden">
-        {/* Background */}
-        <VideoBackground />
+    <body >
+        {<video autoPlay muted loop className="video">
+          <source src="/lofi1.mp4" type="video/mp4" />
+        </video> }
 
-        {/* Overlay Content */}
-        <div className="relative z-10 min-h-screen">
+        <Navbar />
+        <main className="relative z-10 min-h-screen pt-16">
           {children}
-        </div>
+        </main>
 
-        <MusicBar />
-      </body>
+        {/* <MusicBar /> */}
+    </body>
+
     </html>
   );
 }
-
