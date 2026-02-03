@@ -1,9 +1,8 @@
 import "./globals.css";
 import MusicBar from "../components/MusicBar";
 import "./globals.css";
-import Navbar from "../components/navbar";
-import { color } from "framer-motion";
 import VideoBackground from "@/components/VideoBackground";
+import Navbar from "../components/Navbar";
 
 
 
