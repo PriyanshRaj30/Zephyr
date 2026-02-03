@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 const videos = [
   "/lofi1.mp4",
   "/lofi2.mp4",
-  "/lofi3.mp4",
-  "/lofi4.mp4",
+  "/lofi3.mp4"
 ];
 
 export default function VideoBackground() {
@@ -15,7 +14,7 @@ export default function VideoBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % videos.length);
-    }, 6_000); // change every 60 sec
+    }, 3_000); // change every 60 sec
 
     return () => clearInterval(interval);
   }, []);
