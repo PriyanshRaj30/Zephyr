@@ -14,9 +14,6 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body >
-        {/* {<video autoPlay muted loop className="video">
-          <source src="/lofi2.mp4" type="video/mp4" />
-        </video> } */}
         <VideoBackground />
         <Navbar />
         <main className="relative z-10 min-h-screen pt-16">
