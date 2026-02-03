@@ -14,7 +14,7 @@ export default function VideoBackground() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % videos.length);
-    }, 1_000); // change every 60 sec
+    }, 6_000); // change every 60 sec
 
     return () => clearInterval(interval);
   }, []);
